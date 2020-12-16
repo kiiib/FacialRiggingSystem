@@ -1,4 +1,4 @@
-include "CommonFunction.ms"
+-- include "CommonFunction.ms"
 fn AddCricle cirName cirRadius cirColor = (  
     cir = circle radius:cirRadius name:cirName wireColor:cirColor
     return cir
@@ -12,7 +12,6 @@ fn AddDummy dummyName dummySize = (
     return  dum
 )
 fn CreateController = (
-
     -- Shape Part
     cir = AddCricle "face_CircleCtr" 0.25 blue
     points = AddPoint "face_PointLoc" 0.25 blue
@@ -26,7 +25,8 @@ fn CreateController = (
     cir.parent = dum
     dum.parent = points
 
+	return cir
 )
 
 
-CreateController()
+-- CreateController()

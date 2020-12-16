@@ -1,2 +1,11 @@
-messageBox "Hello, Yujing"
-print "Hello, Yujing"
+include "CommonFunction.ms"
+include "Controller.ms"
+include "Bone.ms"
+
+fn Main = (
+    ctrl1 = CreateController()
+    bone1 = AddBone [0, 0, 0] [0, 0, 5]
+    BoneControllerRelation bone1 ctrl1
+)
+
+Main()
