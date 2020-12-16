@@ -53,7 +53,7 @@ fn CreateController = (
 
     -- Axis
     cir.rotation.x_rotation=90
-    RotatePivot cir 0 0 -90
+    RotatePivot cir 90 0 -90
     
 )
 
