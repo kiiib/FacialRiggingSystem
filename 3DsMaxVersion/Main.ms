@@ -1,6 +1,6 @@
-include "CommonFunction.ms"
-include "Controller.ms"
-include "Bone.ms"
+filein "CommonFunction.ms"
+filein "Controller.ms"
+filein "Bone.ms"
 
 fn Main = (
     ctrl1 = CreateController()
