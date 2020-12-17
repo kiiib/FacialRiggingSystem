@@ -34,3 +34,9 @@ fn RotatePivot obj x y z absolute:true =
 	
 	return ok
 )
+
+fn AlignTwoObject obj1 obj2 = 
+(
+	obj1.rotation = obj2.rotation
+	obj1.pos = obj2.pos
+)
