@@ -34,9 +34,35 @@ fn RotatePivot obj x y z absolute:true =
 	
 	return ok
 )
+fn freezePosition node = 
+(
+	c = node.position.controller = Position_List()
+	c.setName 1 "Origin_Position"
+	c.available.controller = Position_XYZ()
+	c.setActive 2
+	c.setName 2 "Free_Position"
+	c	
+)
+
+fn freezeRotation node = 
+(
+	c = node.rotation.controller = Rotation_List()
+	c.setName 1 "Origin_Rotation"
+	c.available.controller = Euler_XYZ()
+	c.setActive 2
+	c.setName 2 "Free_Rotation"
+	c	
+)
+
+fn FreezeTransform node = 
+(
+	freezePosition node
+	freezeRotation node
+)
 
 fn AlignTwoObject obj1 obj2 = 
 (
 	obj1.rotation = obj2.rotation
 	obj1.pos = obj2.pos
 )
+
