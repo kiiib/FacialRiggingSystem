@@ -1,13 +1,3 @@
--- include "CommonFunction.ms"
--- include "Controller.ms"
-
-
-fn InitBonePosRot bone = (
-    FreezeTransform bone
-    -- TransformToZero bone
-    -- RotationToZero bone
-)
-
 fn AddBone startPos endPos width:0.2 height:0.2 = (
     bx1 = Dummy pos:startPos
     bx2 = Dummy pos:endPos
@@ -31,7 +21,6 @@ fn AddBone startPos endPos width:0.2 height:0.2 = (
     delete bx1
     delete bx2
 
-    -- InitBonePosRot bn1
     return bn1
 )
 
