@@ -15,6 +15,8 @@ fn Main = (
 
     -- Create Controller
     ctrl_LeftEye = CreateController()
+    ctrl_LeftEye2 = CreateController()
+    ctrl_LeftEye2.name = "dfdsf"
 
     -- Create Bones
     bone_LeftEye1 = AddBone [0, 0, 0] [0, 0, 5]
@@ -29,23 +31,24 @@ fn Main = (
 
     -- Init Controllers and bones
     FreezeTransform ctrl_LeftEye
+    FreezeTransform ctrl_LeftEye2
     FreezeTransform bone_LeftEye1
     FreezeTransform bone_LeftEye2
     FreezeTransform bone_LeftEye3
 
-    
-    scriptContent = "degTorad((face_PointLoc.controller[1][2].value)[3])"
-    -- scriptContent = ""
-    AssignOneAxisFloatScriptRotationController bone_LeftEye1 ctrl_LeftEye "Z" scriptContent
+    -- Script Variables
+    ctrlVar = #()
+    append ctrlVar ctrl_LeftEye
+    append ctrlVar ctrl_LeftEye2
 
-    -- Relation between the Controller and Bones
-    -- BoneControllerRelation bone_LeftEye1 ctrl_LeftEye
-    -- BoneControllerRelation bone_LeftEye2 ctrl_LeftEye
-    -- BoneControllerRelation bone_LeftEye3 ctrl_LeftEye
+    -- Assign script
+    RotZScriptContent = "degTorad((" + ctrlVar[1].name + ".controller[1][2].value)[3] + (" + ctrlVar[2].name + ".controller[1][2].value)[2])"
+    PosYScriptContent = "(" + ctrlVar[1].name + ".controller[1][2].value)[3] * 0.8 + (" + ctrlVar[2].name + ".controller[1][2].value)[3] * 0.5"
+    AssignOneAxisFloatScriptRotationController bone_LeftEye1 ctrlVar "Z" RotZScriptContent
+    AssignOneAxisFloatScriptPositionController bone_LeftEye1 ctrlVar "Y" PosYScriptContent
 
-    --AlignTwoObject ctrl1 selection[1]
-    -- b = box pos:[0, 0, 0]
-    -- RotatePivot b 90 0 180
+    PosScriptContent = "[(" + ctrlVar[1].name + ".controller[1][2].value)[1] + (" + ctrlVar[2].name + ".controller[1][2].value)[1], (" + ctrlVar[1].name + ".controller[1][2].value)[2] + (" + ctrlVar[2].name + ".controller[1][2].value)[2], (" + ctrlVar[1].name + ".controller[1][2].value)[3] + (" + ctrlVar[2].name + ".controller[1][2].value)[3]]"
+    AssignPositionScriptController bone_LeftEye2 ctrlVar PosScriptContent
     
     ------End Left Eye Part--------
 )
