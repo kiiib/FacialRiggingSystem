@@ -27,8 +27,15 @@ fn Main = (
     AlignTwoObject bone_LeftEye2 Loc_LeftEyeBone2
     AlignTwoObject bone_LeftEye3 Loc_LeftEyeBone3
 
+    -- Init Controllers and bones
+    FreezeTransform ctrl_LeftEye
+    FreezeTransform bone_LeftEye1
+    FreezeTransform bone_LeftEye2
+    FreezeTransform bone_LeftEye3
+
     
     scriptContent = "degTorad((face_PointLoc.controller[1][2].value)[3])"
+    -- scriptContent = ""
     AssignOneAxisFloatScriptRotationController bone_LeftEye1 ctrl_LeftEye "Z" scriptContent
 
     -- Relation between the Controller and Bones

@@ -1,5 +1,13 @@
 -- include "CommonFunction.ms"
 -- include "Controller.ms"
+
+
+fn InitBonePosRot bone = (
+    FreezeTransform bone
+    -- TransformToZero bone
+    -- RotationToZero bone
+)
+
 fn AddBone startPos endPos width:0.2 height:0.2 = (
     bx1 = Dummy pos:startPos
     bx2 = Dummy pos:endPos
@@ -9,8 +17,8 @@ fn AddBone startPos endPos width:0.2 height:0.2 = (
     bn1 = boneSys.createBone bx1.pos bx2.pos (cross dir bx1.dir)
     -- make end bone
     bn2 = boneSys.createBone bx2.pos (bx2.pos + 0.0001*dir) bn1.dir
-    RotatePivot bn1 90 0 -90
-    RotatePivot bn2 90 0 -90
+    -- RotatePivot bn1 90 0 -90
+    -- RotatePivot bn2 90 0 -90
     bn2.parent = bn1
     bn2.length = bn1.width
 
@@ -22,6 +30,8 @@ fn AddBone startPos endPos width:0.2 height:0.2 = (
     -- return b;
     delete bx1
     delete bx2
+
+    -- InitBonePosRot bn1
     return bn1
 )
 

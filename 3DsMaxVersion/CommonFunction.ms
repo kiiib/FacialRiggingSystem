@@ -34,32 +34,86 @@ fn RotatePivot obj x y z absolute:true =
 	
 	return ok
 )
-fn freezePosition node = 
+
+-- Freeze Position
+fn FreezePosition node = 
 (
-	c = node.position.controller = Position_List()
-	c.setName 1 "Origin_Position"
-	c.available.controller = Position_XYZ()
-	c.setActive 2
-	c.setName 2 "Free_Position"
-	c	
+	if classof node.Position.controller != Position_layer do
+	(
+		-- freeze position
+		node.position.controller = Bezier_Position()
+		node.position.controller = position_list()
+		node.position.controller.available.controller = Position_XYZ()
+
+		node.position.controller.setname 1 "Frozen Position"
+		node.position.controller.setname 2 "Zero Pos XYZ"
+		node.position.controller.SetActive 2
+		
+		-- position to zero
+		node.position.controller[2].x_Position = 0
+		node.position.controller[2].y_Position = 0
+		node.position.controller[2].z_Position = 0
+
+	)
 )
 
-fn freezeRotation node = 
+-- Freeze Rotation
+fn FreezeRotation node = 
 (
-	c = node.rotation.controller = Rotation_List()
-	c.setName 1 "Origin_Rotation"
-	c.available.controller = Euler_XYZ()
-	c.setActive 2
-	c.setName 2 "Free_Rotation"
-	c	
+	if classof node.rotation.controller != Rotation_Layer do
+	(
+		-- freeze rotation
+		node.rotation.controller = Euler_XYZ()
+		node.rotation.controller = Rotation_list()
+		node.rotation.controller.available.controller = Euler_XYZ()
+
+		node.rotation.controller.setname 1 "Inital Pose"
+		node.rotation.controller.setname 2 "Keyframe XYZ"
+
+		node.rotation.controller.SetActive 2
+	)
 )
 
+-- FreezeTransform Object
 fn FreezeTransform node = 
 (
-	freezePosition node
-	freezeRotation node
+	FreezeRotation node
+	FreezePosition node	
 )
 
+-- Set Position to Zero
+fn TransformToZero node =
+(
+	if classof node.Position.controller != Position_Layer then
+	(
+		local active = node.position.controller.active
+		node.Position.controller[active].value = (Point3 0 0 0)
+	)
+	else
+	(
+		node.Position.controller[2].x_Position = 0
+		node.Position.controller[2].y_Position = 0
+		node.Position.controller[2].z_Position = 0
+	)
+)
+
+-- Set Rotation to Zero
+fn RotationToZero node = 
+(
+	if classof node.rotation.controller != Rotation_Layer then
+	(
+		local active = node.position.controller.active
+		node.rotation.controller[active].value = (quat 0 0 0 1)
+	)
+	else
+	(
+		node.rotation.controller[2].x_rotation = 0
+		node.rotation.controller[2].y_rotation = 0
+		node.rotation.controller[2].z_rotation = 0
+	)
+)
+
+-- Align two Object, align obj1 to the obj2's position and rotation
 fn AlignTwoObject obj1 obj2 = 
 (
 	obj1.rotation = obj2.rotation

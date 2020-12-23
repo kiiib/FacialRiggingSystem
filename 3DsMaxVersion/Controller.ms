@@ -3,6 +3,7 @@ fn AddCricle cirName cirRadius cirColor = (
     cir = circle radius:cirRadius name:cirName wireColor:cirColor
     return cir
 )
+
 fn AddPoint pointName pointSize pointsColor = (  
     pit = point name:pointName size: pointSize wireColor:pointsColor
     return pit
@@ -26,7 +27,7 @@ fn CreateController = (
     cir.parent = dum
     dum.parent = points
 
-    FreezeTransform pit
+    -- FreezeTransform pit
 
 	return pit
 )

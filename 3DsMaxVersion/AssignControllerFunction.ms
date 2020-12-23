@@ -14,8 +14,10 @@ fn GetAxisArrayNumber axisString =
 fn AssignOneAxisFloatScriptRotationController bone ctrl axis scriptContent=
 (
     axisNumber = GetAxisArrayNumber axis
-    bone.rotation.controller[axisNumber].controller = float_script()
-    assignConrollerAxis =  bone.rotation.controller[axisNumber].controller
+
+    bone.rotation.controller[2][axisNumber].controller = float_script()
+
+    assignConrollerAxis =  bone.rotation.controller[2][axisNumber].controller
     -- Add Variable
     assignConrollerAxis.addNode ctrl.name ctrl
     -- Assign Script Content
