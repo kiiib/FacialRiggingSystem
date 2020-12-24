@@ -9,11 +9,9 @@ fn AddBone locator startPos endPos width:0.2 height:0.2 BoneEnd:false= (
     bn1 = boneSys.createBone bx1.pos bx2.pos (cross dir bx1.dir)
     BoneName = GetBoneName locator.name
     bn1.name = BoneName
-
     if(BoneEnd == true) then (
         -- make end bone
         bn2 = boneSys.createBone bx2.pos (bx2.pos + 0.0001*dir) bn1.dir
-
         bn2.parent = bn1
         bn2.length = bn1.width
 

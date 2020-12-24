@@ -116,10 +116,9 @@ fn RotationToZero node =
 -- Align two Object, align obj1 to the obj2's position and rotation
 fn AlignTwoObject obj1 obj2 = 
 (
-	obj1.rotation = obj2.rotation
+	-- obj1.rotation = obj2.rotation
 	obj1.pos = obj2.pos
 )
-
 
 fn AddCricle Locator cirRadius cirColor = (  
 	cirName = GetCtrlName Locator.name

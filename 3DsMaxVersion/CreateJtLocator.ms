@@ -1,6 +1,3 @@
-filein "CommonFunction.ms"
---filein "Locator.ms"
-
 --fn RotateXYZ obj X Y Z = (
     --obj.rotation.x_rotation = X
     --obj.rotation.y_rotation = Y
@@ -40,11 +37,11 @@ fn CreateEyeBrowMidJt = (
 --Create_EyeLipUpRtJt
 fn CreateEyeLidUpRtJt = (
     loc_eyeLidRtUpInner =  AddPoint "Loc_EyeLidUpRtJt001" 0.5 green
-    Loc_eyeLidRtUpInner.pos = [-1.867,-5.462,168.112]
-    Loc_eyeLidRtUpMid = AddPoint "Loc_EyeLidMidUpRtJt" 0.5 green
-    Loc_eyeLidRtUpMid.pos = [-2.884,-5.694,168.467]
-    Loc_eyeLidRtUpOuter =  AddPoint "Loc_EyeLidUpRtJt002" 0.5 green
-    Loc_eyeLidRtUpOuter.pos = [-4.001,-4.984,168.152]
+    loc_eyeLidRtUpInner.pos = [-1.867,-5.462,168.112]
+    loc_eyeLidRtUpMid = AddPoint "Loc_EyeLidMidUpRtJt" 0.5 green
+    loc_eyeLidRtUpMid.pos = [-2.884,-5.694,168.467]
+    loc_eyeLidRtUpOuter =  AddPoint "Loc_EyeLidUpRtJt002" 0.5 green
+    loc_eyeLidRtUpOuter.pos = [-4.001,-4.984,168.152]
 
 )
 
@@ -82,7 +79,7 @@ fn CreateEyeLidDnLfJt = (
 
 --Create_EyeBallRtJt
 fn CreateEyeBallRtJt = (
-    loc_EyeBallRtRootJt = AddPoint "Loc_Loc_AimEyeRtJt" 0.5 green
+    loc_EyeBallRtRootJt = AddPoint "Loc_AimEyeRtJt" 0.5 green
     loc_EyeBallRtRootJt.pos = [-2.884,-4.531,168.157]
     loc_EyeBallRtJt = AddPoint "Loc_AimEyeRtJt001" 0.5 green
     loc_EyeBallRtJt.pos = [-2.884,-5.637,168.011]
@@ -124,7 +121,7 @@ fn NosetrilLfJt = (
     loc_NosetrilLfJt.pos = [1.394,-6.149,164.552]
 )
 
---Create_NoseMid
+--Create_NoseMidJt
 fn NoseMid = (
     loc_NoseMid = AddPoint "Loc_NoseMidJt002" 0.5 green
     loc_NoseMid.pos = [-0.0034,-8.287,164.687]
@@ -170,7 +167,7 @@ fn MouthLipDnJt = (
 
 --Create_JawRootJt
 fn JawRootJt = (
-    loc_JawRootJt = AddPoint "Loc_JawRootJt" 0.5 green
+    loc_JawRootJt = AddPoint "c" 0.5 green
     loc_JawRootJt.pos = [-0.003,0.525,164.911]
     loc_JawJtDn = AddPoint "Loc_JawJt001 " 0.5 green
     loc_JawJtDn.pos = [-0.003,-5.15,159.053]
@@ -225,4 +222,4 @@ fn FaceSystemLocJtAll = (
     TeethJt()
     TongueJt()
 )
-FaceSystemLocJtAll()
+-- FaceSystemLocJtAll()
