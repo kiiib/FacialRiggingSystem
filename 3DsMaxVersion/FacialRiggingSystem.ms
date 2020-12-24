@@ -11,7 +11,8 @@ fn faceSystem = (
     -- Get CtrlLocator -------
     loc_eyeBrowRtUpCtrl = FindLocator "Loc_EyeBrowUpRtCtrl001"
     -- Create Controller
-    eyeRtCtrl = AddCricle "EyeRtCtrl" 2 blue
+    eyeRtCtrlName = GetCtrlName loc_eyeBrowRtUpCtrl.name
+    eyeRtCtrl = AddCricle eyeRtCtrlName 2 blue
     
     -- AimEyeCtrl = AddRectangle "AimEye" 6 15 blue
 

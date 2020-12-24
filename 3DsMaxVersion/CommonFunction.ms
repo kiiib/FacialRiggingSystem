@@ -176,5 +176,31 @@ fn TwoObjControllerRelation obj1 obj2 = (
 
 fn LookAtConstrantRelation obj1 obj2 = (
 	lookAtCtrl = LookAt_Constraint()
-	
+	lookAtCtrl.relative = false --Not Keep Initial Offset
+)
+
+-- replace string function
+-- http://www.360doc.com/content/18/1120/10/110467_796042795.shtml
+fn ReplaceStr str1 str2 str3 = (
+    while ((i = findstring str1 str2) != undefined) do
+    (
+        str1 = replace str1 i str2.count str3
+    )
+    return str1
+)
+
+-- Get ctrl name from locator function
+fn GetCtrlName locName = (
+	str = locName
+	str = ReplaceStr str "Ctrl" ""
+	str = ReplaceStr str "Loc" "Ctrl"
+	-- print str
+)
+
+-- Get bone name from locator function
+fn GetBoneName locName = (
+	str = locName
+	str = ReplaceStr str "Jt" ""
+	str = ReplaceStr str "Loc" "Jt"
+	-- print str
 )
