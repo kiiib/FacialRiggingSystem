@@ -41,5 +41,5 @@ GUI函数，负责绘制面板及相应对应的响应按钮功能。
 创建控制器Locator的函数，添加人工提前定位好的Controller Locator。
 ### CreateJtLocator.ms
 创建骨骼Locator的函数，添加人工提前定位好的Joint Locator。
-### FacialRiggingSysyem.ms
+### FacialRiggingSystem.ms
 处理脸部各部分创建控制器、骨骼及其相应关系流程的函数。
