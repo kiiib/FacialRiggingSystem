@@ -144,3 +144,14 @@ fn AddRectangle RectangleName RectangleLenght RectangleWidth RectangleColor = (
     rec.rotation.x_rotation = 90
     return rec 
 )
+-- Use Name to find locator
+fn FindLocator name =
+(
+    locator = getNodeByName name
+    
+    if(superClassOf locator == helper) then(
+        return locator
+    )
+
+    return false  
+)
