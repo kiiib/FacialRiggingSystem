@@ -121,7 +121,8 @@ fn AlignTwoObject obj1 obj2 =
 )
 
 
-fn AddCricle cirName cirRadius cirColor = (  
+fn AddCricle Locator cirRadius cirColor = (  
+	cirName = GetCtrlName Locator.name
     cir = circle radius:cirRadius name:cirName wireColor:cirColor
     cir.rotation.x_rotation = 90
     return cir

@@ -11,13 +11,12 @@ fn faceSystem = (
     -- Get CtrlLocator -------
     loc_eyeBrowRtUpCtrl = FindLocator "Loc_EyeBrowUpRtCtrl001"
     -- Create Controller
-    eyeRtCtrlName = GetCtrlName loc_eyeBrowRtUpCtrl.name
-    eyeRtCtrl = AddCricle eyeRtCtrlName 2 blue
+    eyeRtCtrl = AddCricle loc_eyeBrowRtInner 2 blue
     
     -- AimEyeCtrl = AddRectangle "AimEye" 6 15 blue
 
     -- Create Bones(需要添加Bone的命名功能)
-    bone_eyeBrowRtInner = AddBone [0, 0, 0] [0, 0, 5] "Bone1"
+    bone_eyeBrowRtInner = AddBone [0, 0, 0] [0, 0, 5] loc_eyeBrowRtInner
     bone_eyeBrowRtMid  = AddBone [0, 0, 0] [0, 0, 5]
     bone_eyeBrowRtOut = AddBone [0, 0, 0] [0, 0, 5]
 
