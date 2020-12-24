@@ -27,19 +27,19 @@
 - 正式使用时，仅能在**Main.ms**中调用函数，如**Main()**。在测试单文件可临时使用，但提交正式代码时谨记删除掉。
 
 ## 以下为各文件的作用
-### Main.ms
+### <a href="https://github.com/kiiib/FacialRiggingSystem/blob/master/3DsMaxVersion/Main.ms">Main.ms</a>
 主函数，负责调用UI面板。
-### WindowGUI.ms
+### <a href="https://github.com/kiiib/FacialRiggingSystem/blob/master/3DsMaxVersion/WindowGUI.ms">WindowGUI.ms</a>
 GUI函数，负责绘制面板及相应对应的响应按钮功能。
-### CoomonFunction.ms
+### <a href="https://github.com/kiiib/FacialRiggingSystem/blob/master/3DsMaxVersion/WindowGUI.ms">CoomonFunction.ms</a>
 通用函数，如旋转轴心、FreezeTransform。
-### Bone.ms
+### <a href="https://github.com/kiiib/FacialRiggingSystem/blob/master/3DsMaxVersion/Bone.ms">Bone.ms</a>
 处理骨骼相关的函数，如添加骨骼、骨骼链等。
-### AssignControllerFunction.ms
+### <a href="https://github.com/kiiib/FacialRiggingSystem/blob/master/3DsMaxVersion/AssignControllerFunction.ms">AssignControllerFunction.ms</a>
 添加表达式给Controller的函数，如给单轴添加旋转或位移的Float Script或是整体添加Position Script等。
-### CreateCtrlLoc.ms
+### <a href="https://github.com/kiiib/FacialRiggingSystem/blob/master/3DsMaxVersion/CreateCtrlLoc.ms">CreateCtrlLoc.ms</a>
 创建控制器Locator的函数，添加人工提前定位好的Controller Locator。
-### CreateJtLocator.ms
+### <a href="https://github.com/kiiib/FacialRiggingSystem/blob/master/3DsMaxVersion/CreateJtLocator.ms">CreateJtLocator.ms</a>
 创建骨骼Locator的函数，添加人工提前定位好的Joint Locator。
-### FacialRiggingSystem.ms
+### <a href="https://github.com/kiiib/FacialRiggingSystem/blob/master/3DsMaxVersion/FacialRiggingSystem.ms">FacialRiggingSystem.ms</a>
 处理脸部各部分创建控制器、骨骼及其相应关系流程的函数。
