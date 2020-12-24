@@ -156,7 +156,7 @@ fn FindLocator name =
     return false  
 )
 
-
+-- Position and Orientation Constraint With obj1 and obj2
 fn TwoObjControllerRelation obj1 obj2 = (
 
     --- Constraint relation ---
@@ -174,9 +174,16 @@ fn TwoObjControllerRelation obj1 obj2 = (
 
 )
 
+-- LookAt Constraint With obj1 and obj2
 fn LookAtConstrantRelation obj1 obj2 = (
 	lookAtCtrl = LookAt_Constraint()
 	lookAtCtrl.relative = false --Not Keep Initial Offset
+	lookAtCtrl.appendTarget obj2 100
+	lookat_vector_length
+	obj1.rotation.controller = lookAtCtrl
+
+	-- invisible viewline
+	obj1.rotation.controller.lookat_vector_length = 0
 )
 
 -- replace string function
