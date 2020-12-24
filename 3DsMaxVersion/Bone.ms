@@ -1,4 +1,6 @@
 fn AddBone startPos endPos BoneName width:0.2 height:0.2 = (
+
+    -- About creating bone end refercence: https://forums.cgsociety.org/t/maxscript-need-help-creating-bones-on-selection/1587708/3
     bx1 = Dummy pos:startPos
     bx2 = Dummy pos:endPos
 
@@ -12,12 +14,7 @@ fn AddBone startPos endPos BoneName width:0.2 height:0.2 = (
     bn2.parent = bn1
     bn2.length = bn1.width
 
-    -- b = boneSys.createBone startPos endPos [0, 0, 1]
-    -- b.width = width
-    -- b.height = height
-    
-    -- bs = boneSys.createBone startPos endPos [0, 0, 1]
-    -- return b;
+
     delete bx1
     delete bx2
     bn1.name = BoneName
