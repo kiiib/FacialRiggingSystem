@@ -1,4 +1,4 @@
-fn AddBone startPos endPos BoneName width:0.2 height:0.2 BoneEnd:true= (
+fn AddBone startPos endPos BoneName width:0.2 height:0.2 BoneEnd:false= (
 
     -- About creating bone end refercence: https://forums.cgsociety.org/t/maxscript-need-help-creating-bones-on-selection/1587708/3
     bx1 = Dummy pos:startPos

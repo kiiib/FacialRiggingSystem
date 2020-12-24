@@ -173,3 +173,8 @@ fn TwoObjControllerRelation obj1 obj2 = (
     obj1.rotation.controller = oriCtrl
 
 )
+
+fn LookAtConstrantRelation obj1 obj2 = (
+	lookAtCtrl = LookAt_Constraint()
+	
+)
