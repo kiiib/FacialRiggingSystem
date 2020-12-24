@@ -23,26 +23,3 @@ fn AddBone startPos endPos width:0.2 height:0.2 = (
 
     return bn1
 )
-
-fn BoneControllerRelation bone controller = (
-    --parent relation
-    -- bone.parent = controller
-
-    --- Constraint relation ---
-    -- Position Constraint
-    posCtrl = Position_Constraint()
-    posCtrl.relative = false    --Not Keep Initial Offset
-    posCtrl.appendTarget controller 100 --weight:100
-    bone.position.controller = posCtrl
-
-    -- Orientation Constraint
-    oriCtrl = Orientation_Constraint()
-    oriCtrl.relative = false    --Not Keep Initial Offset
-    oriCtrl.appendTarget controller 100
-    bone.rotation.controller = oriCtrl
-
-)
--- cir = AddCricle "Circleabc" 1 [0, 0, 150]
--- cir.rotation.x_rotation=90
--- aBone = AddBone [0, 0, 0] [0, 0, 5]
--- BoneControllerRelation aBone cir

@@ -155,3 +155,21 @@ fn FindLocator name =
 
     return false  
 )
+
+
+fn TwoObjControllerRelation obj1 obj2 = (
+
+    --- Constraint relation ---
+    -- Position Constraint
+    posCtrl = Position_Constraint()
+    posCtrl.relative = false    --Not Keep Initial Offset
+    posCtrl.appendTarget obj2 100 --weight:100
+    obj1.position.controller = posCtrl
+
+    -- Orientation Constraint
+    oriCtrl = Orientation_Constraint()
+    oriCtrl.relative = false    --Not Keep Initial Offset
+    oriCtrl.appendTarget obj2 100
+    obj1.rotation.controller = oriCtrl
+
+)
