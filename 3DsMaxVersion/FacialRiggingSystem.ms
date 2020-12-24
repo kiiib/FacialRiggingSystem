@@ -6,7 +6,21 @@ filein "AssignControllerFunction.ms"
 
 
 fn faceSystem = (
+    -- Beginning About Bone Head and MainCtrl --
+
     jt_head = getNodeByName "Bip001 Head"
+    -- print jt_head.transform.pos
+    dummy_jt_head = AddDummy "Dummy_BipHead" [3, 3, 3]
+    -- AlignTwoObject dummy_jt_head jt_head
+    dummy_jt_head.pos = jt_head.transform.pos
+    dummy_jt_head.parent = jt_head
+    mainCtrl = AddPoint "Ctrl_Main" 1.5 yellow
+    mainCtrl.pos = [0, 0, 180]
+
+    TwoObjControllerRelation mainCtrl dummy_jt_head
+    
+    -- End Beginning About Bone Head and MainCtrl --
+
 
     ------- EyeBrowRt Part -------
 
@@ -32,9 +46,10 @@ fn faceSystem = (
     AlignTwoObject bone_eyeBrowRtOut loc_eyeBrowRtOut
 
     -- Parent and Constraint Relevance
-    bone_eyeBrowRtInner.parent = jt_head
-    bone_eyeBrowRtMid.parent = jt_head
-    bone_eyeBrowRtOut.parent = jt_head
+    eyeRtCtrl.parent = mainCtrl
+    bone_eyeBrowRtInner.parent = dummy_jt_head
+    bone_eyeBrowRtMid.parent = dummy_jt_head
+    bone_eyeBrowRtOut.parent = dummy_jt_head
 
     -- TwoObjControllerRelation eyeRtCtrl jt_head
 
@@ -72,6 +87,8 @@ fn faceSystem = (
     ------- Eyebrow Part -------
 
     ------- End Eyebrow Part --------
+
+    
 )
 
 faceSystemCtrlLoc()
