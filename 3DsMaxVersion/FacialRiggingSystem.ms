@@ -2,22 +2,23 @@ filein "CommonFunction.ms"
 filein "Bone.ms"
 
 fn faceSystem = (
-    ------- Eye Part -------
-
-    -- Get Locator
-    Loc_LeftEyeCtrl1 = FindLocator "Loc_LeftEyeCtrl1"
-    Loc_LeftEyeCtrl2 = FindLocator "Loc_LeftEyeCtrl2"
-    Loc_LeftEyeCtrl3 = FindLocator "Loc_LeftEyeCtrl3"
-
+    
+    ------- EyeBrowRt Part -------
+    -- Get JtLocator -------
+    loc_eyeBrowRtInner = FindLocator "Loc_EyeBrowRtJt001"
+    loc_eyeBrowRtMid = FindLocator "Loc_EyeBrowRtJt002"
+    loc_eyeBrowRtOut = FindLocator "Loc_EyeBrowRtJt003"
+    -- Get CtrlLocator -------
+    loc_eyeBrowRtUpCtrl = FindLocator "Loc_EyeBrowUpRtCtrl001"
     -- Create Controller
     eyeRtCtrl = AddCricle "EyeRtCtrl" 2 blue
-    eyeLfCtrl = AddCricle "EyeLfCtrl" 2 blue
-    AimEyeCtrl = AddRectangle "AimEye" 6 15 blue
+    
+    -- AimEyeCtrl = AddRectangle "AimEye" 6 15 blue
 
     -- Create Bones(需要添加Bone的命名功能)
-    bone_LeftEye1 = AddBone [0, 0, 0] [0, 0, 5]
-    bone_LeftEye2 = AddBone [0, 0, 0] [0, 0, 5]
-    bone_LeftEye3 = AddBone [0, 0, 0] [0, 0, 5]
+    bone_eyeBrowRtInner = AddBone [0, 0, 0] [0, 0, 5] "Bone1"
+    bone_eyeBrowRtMid  = AddBone [0, 0, 0] [0, 0, 5]
+    bone_eyeBrowRtOut = AddBone [0, 0, 0] [0, 0, 5]
 
     -- Align the objects to the locator
     AlignTwoObject ctrl_LeftEye Loc_LeftEyeCtrl
