@@ -1,4 +1,4 @@
-fn AddBone startPos endPos width:0.2 height:0.2 = (
+fn AddBone startPos endPos BoneName width:0.2 height:0.2 = (
     bx1 = Dummy pos:startPos
     bx2 = Dummy pos:endPos
 
@@ -20,6 +20,8 @@ fn AddBone startPos endPos width:0.2 height:0.2 = (
     -- return b;
     delete bx1
     delete bx2
+    bn1.name = BoneName
+    bn2.name = BoneName + "_end"
 
     return bn1
 )
