@@ -179,7 +179,6 @@ fn LookAtConstrantRelation obj1 obj2 = (
 	lookAtCtrl = LookAt_Constraint()
 	lookAtCtrl.relative = false --Not Keep Initial Offset
 	lookAtCtrl.appendTarget obj2 100
-	lookat_vector_length
 	obj1.rotation.controller = lookAtCtrl
 
 	-- invisible viewline
