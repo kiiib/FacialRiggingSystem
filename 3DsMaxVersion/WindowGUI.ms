@@ -1,5 +1,3 @@
-filein "CreateCtrlLocator.ms"
-filein "CreateJtLocator.ms"
 
 rollout allControls "C1 Facial Rigging System v1.0"(
     GroupBox BrbFacialRiggingSystem "C1 Facial Rigging System" pos:[8, 5] width:235 height:280
@@ -42,4 +40,4 @@ fn MainGUI = (
     CreateDialog allControls 250 300
 )
 
-MainGUI()
+-- MainGUI()
