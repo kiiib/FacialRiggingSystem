@@ -1,3 +1,5 @@
+
+--filein "CommonFunction.ms"
 --fn RotateXYZ obj X Y Z = (
     --obj.rotation.x_rotation = X
     --obj.rotation.y_rotation = Y
@@ -37,22 +39,20 @@ fn CreateEyeBrowMidJt = (
 --Create_EyeLipUpRtJt
 fn CreateEyeLidUpRtJt = (
     loc_eyeLidRtUpInner =  AddPoint "Loc_EyeLidUpRtJt001" 0.5 green
-    loc_eyeLidRtUpInner.pos = [-1.867,-5.462,168.112]
-    loc_eyeLidRtUpMid = AddPoint "Loc_EyeLidMidUpRtJt" 0.5 green
-    loc_eyeLidRtUpMid.pos = [-2.884,-5.694,168.467]
+    loc_eyeLidRtUpInner.pos = [-1.867, -5.462, 168.112]
+    
     loc_eyeLidRtUpOuter =  AddPoint "Loc_EyeLidUpRtJt002" 0.5 green
-    loc_eyeLidRtUpOuter.pos = [-4.001,-4.984,168.152]
+    loc_eyeLidRtUpOuter.pos = [-4.001, -4.984, 168.152]
 
 )
 
 --Create_EyeLipDnRtJt
 fn CreateEyeLidDnRtJt = (
     loc_eyeLidRtDnInner =  AddPoint "Loc_EyeLidDnRtJt001" 0.5 green
-    loc_eyeLidRtDnInner.pos = [-2.105,-5.36,167.45]
-    loc_eyeLidRtDnMid = AddPoint "Loc_EyeLidMidDnRtJt" 0.5 green
-    loc_eyeLidRtDnMid.pos = [-2.884,-5.456,167.307]
+    loc_eyeLidRtDnInner.pos = [-2.105, -5.36, 167.45]
+    
     loc_eyeLidRtDnOuter =  AddPoint "Loc_EyeLidDnRtJt002" 0.5 green
-    loc_eyeLidRtDnOuter.pos = [-3.906,-4.837,167.521]
+    loc_eyeLidRtDnOuter.pos = [-3.906, -4.837, 167.521]
 )
 
 
@@ -60,8 +60,7 @@ fn CreateEyeLidDnRtJt = (
 fn CreateEyeLidUpLfJt = (
     loc_eyeLidLfUpInner =  AddPoint "Loc_EyeLidUpLfJt001" 0.5 green
     loc_eyeLidLfUPInner.pos = [1.867,-5.462,168.112]
-    loc_eyeLidLfUpMid = AddPoint "Loc_EyeLidMidUpLfJt" 0.5 green
-    loc_eyeLidLfUpMid.pos = [2.884,-5.694,168.467]
+    
     loc_eyeLidLfUpOuter =  AddPoint "Loc_EyeLidUpLfJt002" 0.5 green
     loc_eyeLidLfUpOuter.pos = [4.001,-4.984,168.152]
 
@@ -71,26 +70,48 @@ fn CreateEyeLidUpLfJt = (
 fn CreateEyeLidDnLfJt = (
     loc_eyeLidLfDnInner =  AddPoint "Loc_EyeLidDnLfJt001" 0.5 green
     loc_eyeLidLfDnInner.pos = [2.105,-5.36,167.45]
-    loc_eyeLidLfDnMid = AddPoint "Loc_EyeLidMidDnLfJt" 0.5 green
-    loc_eyeLidLfDnMid.pos = [2.884,-5.456,167.307]
+    
     loc_eyeLidLfDnOuter =  AddPoint "Loc_EyeLidDnLfJt002" 0.5 green
     loc_eyeLidLfDnOuter.pos = [3.906,-4.837,167.521]
 )
 
 --Create_EyeBallRtJt
 fn CreateEyeBallRtJt = (
-    loc_EyeBallRtRootJt = AddPoint "Loc_AimEyeRtJt" 0.5 green
-    loc_EyeBallRtRootJt.pos = [-2.884,-4.531,168.157]
-    loc_EyeBallRtJt = AddPoint "Loc_AimEyeRtJt001" 0.5 green
-    loc_EyeBallRtJt.pos = [-2.884,-5.637,168.011]
+    loc_EyeBallRtRootUpJt = AddPoint "EyeBallRtRootUpJt" 0.5 green
+    loc_EyeBallRtRootUpJt.pos = [-2.884,-4.531,168.157]
+    loc_EyeBallRtRootUpLipJt = AddPoint "EyeBallRtRootUpLipJt" 0.5 green
+    loc_EyeBallRtRootUpLipJt.pos = [-2.884,-5.694,168.467]
+
+    loc_EyeBallRtRootMidJt = AddPoint "Loc_AimEyeRtJt" 0.5 green
+    loc_EyeBallRtRootMidJt.pos = [-2.884,-4.531,168.157]
+    loc_EyeBallRtRootMidLipJt = AddPoint "Loc_AimEyeRtJt001" 0.5 green
+    loc_EyeBallRtRootMidLipJt.pos = [-2.884,-5.637,168.011]
+
+    loc_EyeBallRtRootDnJt = AddPoint "EyeBallRtRootUpJt" 0.5 green
+    loc_EyeBallRtRootDnJt.pos = [-2.884,-4.531,168.157]
+    loc_EyeBallRtRootDnLipJt = AddPoint "EyeBallRtRootDnLipJt" 0.5 green
+    loc_EyeBallRtRootDnLipJt.pos = [2.884,-5.456,167.307]
+
+    
 )
 
 --Create_EyeBallLfJt
 fn CreateEyeBallLfJt = (
-    loc_EyeBallLfRootJt = AddPoint "Loc_AimEyeLfJt" 0.5 green
-    loc_EyeBallLfRootJt.pos = [2.884,-4.531,168.157]
-    loc_EyeBallLfJt = AddPoint "Loc_AimEyeLfJt001" 0.5 green
-    loc_EyeBallLfJt.pos = [2.884,-5.637,168.011]
+    loc_EyeBallLfRootUpJt = AddPoint "EyeBallLfRootUpJt" 0.5 green
+    loc_EyeBallLfRootUpJt.pos = [2.884,-4.531,168.157]
+    loc_EyeBallRtRootUpLipJt = AddPoint "EyeBallLfRootUpLipJt" 0.5 green
+    loc_EyeBallRtRootUpLipJt.pos = [2.884,-5.694,168.467]
+
+    loc_EyeBallLfRootMidJt = AddPoint "Loc_AimEyeLfJt" 0.5 green
+    loc_EyeBallLfRootMidJt.pos = [2.884,-4.531,168.157]
+    loc_EyeBallLfRootMidLipJt = AddPoint "Loc_AimEyeLfJt001" 0.5 green
+    loc_EyeBallLfRootMidLipJt.pos = [2.884,-5.637,168.011]
+
+    loc_EyeBallLfRootDnJt = AddPoint "EyeBallLfRootDnJt" 0.5 green
+    loc_EyeBallLfRootDnJt.pos = [2.884,-4.531,168.157]
+    loc_EyeBallLfRootDnLipJt = AddPoint "EyeBallLfRootDnLipJt" 0.5 green
+    loc_EyeBallLfRootDnLipJt.pos = [2.884,-5.456,167.307]
+
 )
 
 --Create_CheekRaiserRtJt
@@ -167,7 +188,7 @@ fn MouthLipDnJt = (
 
 --Create_JawRootJt
 fn JawRootJt = (
-    loc_JawRootJt = AddPoint "c" 0.5 green
+    loc_JawRootJt = AddPoint "Loc_JawRootJt" 0.5 green
     loc_JawRootJt.pos = [-0.003,0.525,164.911]
     loc_JawJtDn = AddPoint "Loc_JawJt001 " 0.5 green
     loc_JawJtDn.pos = [-0.003,-5.15,159.053]
@@ -222,4 +243,4 @@ fn FaceSystemLocJtAll = (
     TeethJt()
     TongueJt()
 )
--- FaceSystemLocJtAll()
+--FaceSystemLocJtAll()
