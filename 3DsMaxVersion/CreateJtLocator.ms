@@ -77,9 +77,9 @@ fn CreateEyeLidDnLfJt = (
 
 --Create_EyeBallRtJt
 fn CreateEyeBallRtJt = (
-    loc_EyeBallRtRootUpJt = AddPoint "EyeBallRtRootUpJt" 0.5 green
+    loc_EyeBallRtRootUpJt = AddPoint "Loc_EyeBallRtRootUpJt" 0.5 green
     loc_EyeBallRtRootUpJt.pos = [-2.884,-4.531,168.157]
-    loc_EyeBallRtRootUpLipJt = AddPoint "EyeBallRtRootUpLipJt" 0.5 green
+    loc_EyeBallRtRootUpLipJt = AddPoint "Loc_EyeBallRtRootUpLipJt" 0.5 green
     loc_EyeBallRtRootUpLipJt.pos = [-2.884,-5.694,168.467]
 
     loc_EyeBallRtRootMidJt = AddPoint "Loc_AimEyeRtJt" 0.5 green
@@ -87,9 +87,9 @@ fn CreateEyeBallRtJt = (
     loc_EyeBallRtRootMidLipJt = AddPoint "Loc_AimEyeRtJt001" 0.5 green
     loc_EyeBallRtRootMidLipJt.pos = [-2.884,-5.637,168.011]
 
-    loc_EyeBallRtRootDnJt = AddPoint "EyeBallRtRootUpJt" 0.5 green
+    loc_EyeBallRtRootDnJt = AddPoint "Loc_EyeBallRtRootUpJt" 0.5 green
     loc_EyeBallRtRootDnJt.pos = [-2.884,-4.531,168.157]
-    loc_EyeBallRtRootDnLipJt = AddPoint "EyeBallRtRootDnLipJt" 0.5 green
+    loc_EyeBallRtRootDnLipJt = AddPoint "Loc_EyeBallRtRootDnLipJt" 0.5 green
     loc_EyeBallRtRootDnLipJt.pos = [2.884,-5.456,167.307]
 
     
@@ -97,9 +97,9 @@ fn CreateEyeBallRtJt = (
 
 --Create_EyeBallLfJt
 fn CreateEyeBallLfJt = (
-    loc_EyeBallLfRootUpJt = AddPoint "EyeBallLfRootUpJt" 0.5 green
+    loc_EyeBallLfRootUpJt = AddPoint "Loc_EyeBallLfRootUpJt" 0.5 green
     loc_EyeBallLfRootUpJt.pos = [2.884,-4.531,168.157]
-    loc_EyeBallRtRootUpLipJt = AddPoint "EyeBallLfRootUpLipJt" 0.5 green
+    loc_EyeBallRtRootUpLipJt = AddPoint "Loc_EyeBallLfRootUpLipJt" 0.5 green
     loc_EyeBallRtRootUpLipJt.pos = [2.884,-5.694,168.467]
 
     loc_EyeBallLfRootMidJt = AddPoint "Loc_AimEyeLfJt" 0.5 green
@@ -107,9 +107,9 @@ fn CreateEyeBallLfJt = (
     loc_EyeBallLfRootMidLipJt = AddPoint "Loc_AimEyeLfJt001" 0.5 green
     loc_EyeBallLfRootMidLipJt.pos = [2.884,-5.637,168.011]
 
-    loc_EyeBallLfRootDnJt = AddPoint "EyeBallLfRootDnJt" 0.5 green
+    loc_EyeBallLfRootDnJt = AddPoint "Loc_EyeBallLfRootDnJt" 0.5 green
     loc_EyeBallLfRootDnJt.pos = [2.884,-4.531,168.157]
-    loc_EyeBallLfRootDnLipJt = AddPoint "EyeBallLfRootDnLipJt" 0.5 green
+    loc_EyeBallLfRootDnLipJt = AddPoint "Loc_EyeBallLfRootDnLipJt" 0.5 green
     loc_EyeBallLfRootDnLipJt.pos = [2.884,-5.456,167.307]
 
 )
