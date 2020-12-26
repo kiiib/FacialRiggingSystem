@@ -210,3 +210,9 @@ fn GetBoneName locName = (
 	str = ReplaceStr str "Loc" "Jt"
 	-- print str
 )
+
+fn RotateXYZ obj X Y Z = (
+    obj.rotation.x_rotation = X
+    obj.rotation.y_rotation = Y
+    obj.rotation.z_rotation = Z
+)

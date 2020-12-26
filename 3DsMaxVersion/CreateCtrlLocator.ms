@@ -1,3 +1,4 @@
+filein "CommonFunction.ms"
 --CreateEyeBrowRtUpCtrl--
 fn CreateEyeBrowRtUpCtrl = (
     loc_eyeBrowRtUpCtrl = AddPoint "Loc_EyeBrowUpRtCtrl001" 0.6 blue 
@@ -12,7 +13,7 @@ fn CreateEyeBrowLfUpCtrl = (
 
 --CreateEyeLidRtCtrl--
 fn CreateEyeLidRtCtrl = (
-    loc_eyeLidRtInCtrl = AddPoint "Loc_EyeBrowUpRtInCtrl001" 0.6 blue 
+    loc_eyeLidRtInCtrl = AddPoint "Loc_EyeLidUpRtInCtrl001" 0.6 blue 
     loc_eyeLidRtInCtrl.pos = [-1.374, -5.777, 167.609] 
     loc_eyeLidRtOutCtrl = AddPoint "Loc_EyeLidUpRtOutCtrl001" 0.6 blue
     loc_eyeLidRtOutCtrl.pos = [-4.475, -4.922, 167.892] 
@@ -20,11 +21,27 @@ fn CreateEyeLidRtCtrl = (
 
 --CreateEyeLidLfCtrl--
 fn CreateEyeLidLfCtrl = (
-    loc_eyeLidLfInCtrl = AddPoint "Loc_EyeBrowUpLfInCtrl001" 0.6 blue
+    loc_eyeLidLfInCtrl = AddPoint "Loc_EyeLidUpLfInCtrl001" 0.6 blue
     loc_eyeLidLfInCtrl.pos = [1.374, -5.777, 167.609] 
     loc_eyeLidLfOutCtrl = AddPoint "Loc_EyeLidUpLfOutCtrl001" 0.6 blue
     loc_eyeLidLfOutCtrl.pos = [4.475, -4.922, 167.892] 
 )
+--CreateEyeBallRtCtrl--
+fn CreateEyeBallRtCtrl = (
+    loc_eyeBallRtCtrl = AddPoint "Loc_eyeBallRtCtrl" 0.6 blue
+    loc_eyeBallRtCtrl.pos = [-2.884, -11.115, 168.016]
+)
+--CreateEyeBallLfCtrl--
+fn CreateEyeBallLfCtrl = (
+    loc_eyeBallLfCtrl = AddPoint "Loc_eyeBallLfCtrl" 0.6 blue
+    loc_eyeBallLfCtrl.pos = [2.884, -11.115, 168.016]
+)
+--CreateEyeBallMidCtrl--
+fn CreateEyeBallMidCtrl = (
+    loc_eyeBallMidCtrl = AddPoint "Loc_eyeBallMidCtrl" 0.6 blue
+    loc_eyeBallMidCtrl.pos = [-0.003,-11.115,168.022]
+)
+
 
 --CreateNosetrilRtCtrl--
 fn CreateNosetrilRtCtrl = (
@@ -94,6 +111,9 @@ fn faceSystemCtrlLoc = (
     LipRegionDnCtrl()
     TeethCtrl ()
     TongueCtrl()
+    CreateEyeBallRtCtrl()
+    CreateEyeBallLfCtrl()
+    CreateEyeBallMidCtrl()
 
 )
--- faceSystemCtrlLoc()
+ faceSystemCtrlLoc()
