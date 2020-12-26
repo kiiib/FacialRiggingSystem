@@ -73,15 +73,15 @@ fn CreateEyeLidDnLfJt = (
 
 --Create_EyeBallRtJt
 fn CreateEyeBallRtJt = (
-    loc_EyeBallRtRootUpJt = AddPoint "Loc_EyeBallRtRootUpJt" 0.5 green
-    loc_EyeBallRtRootUpJt.pos = [-2.884,-4.531,168.157]
+    loc_EyeBallRtRootJt = AddPoint "Loc_EyeBallRtRootJt" 0.5 green
+    loc_EyeBallRtRootJt.pos = [-2.884,-4.531,168.157]
     
 )
 
 --Create_EyeBallLfJt
 fn CreateEyeBallLfJt = (
-    loc_EyeBallLfRootUpJt = AddPoint "Loc_EyeBallLfRootUpJt" 0.5 green
-    loc_EyeBallLfRootUpJt.pos = [2.884,-4.531,168.157]
+    loc_EyeBallLfRootJt = AddPoint "Loc_EyeBallLfRootJt" 0.5 green
+    loc_EyeBallLfRootJt.pos = [2.884,-4.531,168.157]
     
 )
 
