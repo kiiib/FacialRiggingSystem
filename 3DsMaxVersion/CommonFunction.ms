@@ -137,7 +137,8 @@ fn AddDummy dummyName dummySize = (
     return dum
 )
 
-fn AddRectangle RectangleName RectangleLenght RectangleWidth RectangleColor = (  
+fn AddRectangle Locator RectangleLenght RectangleWidth RectangleColor = (  
+	RectangleName = GetCtrlName Locator.name
     rec = Rectangle name:RectangleName wireColor:RectangleColor
     rec.width = RectangleWidth
     rec.length = RectangleLenght
