@@ -20,10 +20,13 @@ fn FaceCheekPart jt_head mainCtrl = (
     loc_NosetrilLfCtrl = FindLocator "Loc_NosetrilLfCtrl"
 
     -- Create Controller
-    ctrl_SmLipRtCtrl = AddCricle loc_SmLipRtCtrl 0.5 blue
-    ctrl_SmLipLfCtrl =  AddCricle loc_SmLipLfCtrl 0.5 blue
+    -- ctrl_SmLipRtCtrl = AddCricle loc_SmLipRtCtrl 0.5 blue
+    -- ctrl_SmLipLfCtrl =  AddCricle loc_SmLipLfCtrl 0.5 blue
+    ctrl_SmLipRtCtrl = getNodeByName("Ctrl_SmLipRt")
+    ctrl_SmLipLfCtrl = getNodeByName("Ctrl_SmLipLf")
     ctrl_NosetrilRtCtrl =  AddCricle loc_NosetrilRtCtrl 0.5 blue
     ctrl_NosetrilLfCtrl =  AddCricle loc_NosetrilLfCtrl 0.5 blue
+
 
     -- Create Bones
     bone_CheekRtJt = AddBone loc_CheekRtJt [0, 0, 0] [0, 2, 0]

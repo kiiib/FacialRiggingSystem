@@ -8,6 +8,8 @@ filein "FaceEyeBrowPart.ms"
 filein "FaceEyeLipPart.ms"
 filein "FaceEyeBallPart.ms"
 filein "FaceMouthPart.ms"
+filein "FaceCheekPart.ms"
+filein "FaceJawPart.ms"
 
 fn faceSystem = (
     -- Beginning About Bone Head and MainCtrl --
@@ -23,20 +25,14 @@ fn faceSystem = (
 
     TwoObjControllerRelation mainCtrl dummy_jt_head
 
-    -- FaceEyeBallPart jt_head mainCtrl
-    -- FaceEyeLipPart jt_head mainCtrl
-    -- FaceEyeBrowPart jt_head mainCtrl
-    -- FaceMouthPart jt_head mainCtrl
-    
+    FaceEyeBallPart jt_head mainCtrl
+    FaceEyeLipPart jt_head mainCtrl
+    FaceEyeBrowPart jt_head mainCtrl
+    FaceMouthPart jt_head mainCtrl
+    FaceCheekPart jt_head mainCtrl
+    FaceJawPart jt_head mainCtrl
 
 
 )
--- AssignOneAxisFloatScriptPositionController bone_LeftEye1 ctrlVar "Y" PosYScriptContent
 
-    --  PosScriptContent = "[(" + ctrlVarEyeLipUpRt[1].name + ".controller[1][2].value)[1] + (" + ctrlVarEyeLipUpRt[2].name + ".controller[1][2].value)[1], (" + ctrlVarEyeLipUpRt[1].name + ".controller[1][2].value)[2] + (" + ctrlVarEyeLipUpRt[2].name + ".controller[1][2].value)[2], (" + ctrlVarEyeLipUpRt[1].name + ".controller[1][2].value)[3] + (" + ctrlVarEyeLipUpRt[2].name + ".controller[1][2].value)[3]]"
-
-    -- scriptContent = "[(" + ctrlVar[1].name + ".controller[1][2].value)[1],(" + ctrlVar[1].name + ".controller[1][2].value)[2],(" + ctrlVar[1].name + ".controller[1][2].value)[3]]"
-
--- faceSystemCtrlLoc()
--- FaceSystemLocJtAll()
 faceSystem()

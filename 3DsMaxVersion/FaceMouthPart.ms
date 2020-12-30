@@ -24,11 +24,11 @@ fn FaceMouthPart jt_head mainCtrl = (
 
     -- Create Bones
     bone_MouthLipUpJtIN = AddBone loc_MouthLipUpJtIN [0, 0, 0] [0, 2, 0]
-    bone_MouthLipUpJtMid  = AddBone loc_MouthLipUpJtIN [0, 0, 0] [0, 2, 0]
+    bone_MouthLipUpJtMid = AddBone loc_MouthLipUpJtMid [0, 0, 0] [0, 2, 0]
     bone_MouthLipUpJtOut = AddBone loc_MouthLipUpJtOut [0, 0, 0] [0, 2, 0]
 
     bone_MouthLipDnJtIN = AddBone loc_MouthLipDnJtIN [0, 0, 0] [0, 2, 0]
-    bone_MouthLipDnJtMid  = AddBone loc_MouthLipDnJtMid [0, 0, 0] [0, 2, 0]
+    bone_MouthLipDnJtMid = AddBone loc_MouthLipDnJtMid [0, 0, 0] [0, 2, 0]
     bone_MouthLipDnJtOut = AddBone loc_MouthLipDnJtOut [0, 0, 0] [0, 2, 0]
 
     -- Align the objects to the locator
@@ -167,7 +167,7 @@ fn FaceMouthPart jt_head mainCtrl = (
     -- 中下嘴角上下
     scriptContent = "if((" + ctrlVarMouthLip[1].name + ".controller[1][2].value)[3] > 0) then (("+ ctrlVarMouthLip[2].name + ".controller[1][2].value)[3] * 0.1 + (" + ctrlVarMouthLip[1].name + ".controller[1][2].value)[3] * 0.2) else (0)"
     -- Assign Script to Controller
-    AssignOneAxisFloatScriptPositionController bone_MouthLipJtMid ctrlVarMouthLip "X" scriptContent
+    AssignOneAxisFloatScriptPositionController bone_MouthLipDnJtMid ctrlVarMouthLip "X" scriptContent
 
 
     ------- End MouthLip Part --------
