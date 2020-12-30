@@ -1,17 +1,10 @@
-filein "CommonFunction.ms"
-filein "Bone.ms"
-filein "CreateCtrlLocator.ms"
-filein "CreateJtLocator.ms"
-filein "AssignControllerFunction.ms"
-
 filein "FaceEyeBrowPart.ms"
 filein "FaceEyeLipPart.ms"
 filein "FaceEyeBallPart.ms"
 filein "FaceMouthPart.ms"
 filein "FaceCheekPart.ms"
 filein "FaceJawPart.ms"
-
-fn faceSystem = (
+fn FaceSystem = (
     -- Beginning About Bone Head and MainCtrl --
 
     jt_head = getNodeByName "Bip001 Head"
@@ -32,7 +25,6 @@ fn faceSystem = (
     FaceCheekPart jt_head mainCtrl
     FaceJawPart jt_head mainCtrl
 
-
 )
 
-faceSystem()
+-- FaceSystem()

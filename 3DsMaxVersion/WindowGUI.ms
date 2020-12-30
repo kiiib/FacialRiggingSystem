@@ -1,24 +1,48 @@
-
 rollout allControls "C1 Facial Rigging System v1.0"(
-    GroupBox BrbFacialRiggingSystem "C1 Facial Rigging System" pos:[8, 5] width:235 height:330
-    button BtnImportLocators "Import Locators" pos:[25,30] width:200
-    button BtnHideAllLocator "Hide All Locators"  pos:[25, 65] width:200
-    button BtnUnhideAllLocator "Unhide All Locators"  pos:[25, 100] width:200
-    button BtnSelectAllLocator "Select All Locators"  pos:[25, 135] width:200
-    button BtnImportControllers "Import Controllers" pos:[25, 170] width:200
-    button BtnImportJoints "Import Joints" pos:[25, 205] width:200
-    button BtnRelateControllerAndJoints "Relate Ctrl And Joints" pos:[25, 240] width:200
-    button BtnCreateBipBone "Create CS Bone" pos:[25, 275] width:200
-    button BtnClearScene "Clear Scene" pos:[25, 310] width:200
+    -- GroupBox BrbFacialRiggingSystem "C1 Facial Rigging System" pos:[8, 5] width:235 height:330
+    -- button BtnImportBoneLocators "Import Bone Locators" pos:[25,30] width:200
+    -- button BtnImportControllerLocators "Import Controller Locators" pos:[25, 170] width:200
+    -- button BtnHideAllLocator "Hide All Locators"  pos:[25, 65] width:200
+    -- button BtnUnhideAllLocator "Unhide All Locators"  pos:[25, 100] width:200
+    -- button BtnSelectAllLocator "Select All Locators"  pos:[25, 135] width:200
     
-    label LabelEmpty ""
-    label LabelEmpty2 ""
-    -- label LabelQuestion "让我们荡起双桨"
-    label LabelAuthor "popo:test@corp.netease.com"
+    -- -- button BtnImportJoints "Import Joints" pos:[25, 205] width:200
+    -- button BtnRelateControllerAndJoints "Create Ctrl And Joints" pos:[25, 240] width:200
+    -- button BtnCreateBipBone "Create CS Bone" pos:[25, 275] width:200
+    -- button BtnClearScene "Clear Scene" pos:[25, 310] width:200
 
-    on BtnImportLocators pressed do (
-        faceSystemCtrlLoc()
+    group "C1 Facial Rigging System" (
+        button BtnImportBoneLocators "Import Bone Locators" width:200
+        label LabelEmpty1 ""
+        button BtnImportControllerLocators "Import Controller Locators" width:200
+        label LabelEmpty2 ""
+        button BtnHideAllLocator "Hide All Locators" width:200
+        label LabelEmpty3 ""
+        button BtnUnhideAllLocator "Unhide All Locators" width:200
+        label LabelEmpty4 ""
+        button BtnSelectAllLocator "Select All Locators" width:200
+        label LabelEmpty5 ""
+        
+        button BtnRelateControllerAndJoints "Create Ctrl And Joints" width:200
+        label LabelEmpty6 ""
+        button BtnCreateBipBone "Create CS Bone" width:200
+        label LabelEmpty7 ""
+        button BtnClearScene "Clear Scene" width:200
+        label LabelEmpty8 ""
+        
+        -- label LabelEmpty9 ""
+        -- label LabelEmpty10 ""
+        -- label LabelQuestion "让我们荡起双桨"
+        label LabelAuthor "popo:liujianbin@corp.netease.com"
+    )
+    
+
+    on BtnImportBoneLocators pressed do (
         FaceSystemLocJtAll()
+    )
+
+    on BtnImportControllerLocators pressed do (
+        faceSystemCtrlLoc()
     )
 
     on BtnHideAllLocator pressed do (
@@ -37,18 +61,13 @@ rollout allControls "C1 Facial Rigging System v1.0"(
         select $Loc*
     )
 
-    on BtnImportControllers pressed do (
-        
-    )
 
     on BtnImportJoints pressed do (
         
     )
 
     on BtnRelateControllerAndJoints pressed do (
-        -- faceSystemCtrlLoc()
-        -- FaceSystemLocJtAll()
-        -- faceSystem()
+        FaceSystem()
     )
 
     on BtnClearScene pressed do (
