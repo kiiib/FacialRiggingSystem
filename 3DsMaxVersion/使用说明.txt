@@ -1,0 +1,14 @@
+按钮功能
+Import Bone Locators -- 导入骨骼的定位器
+Import Controller Locators -- 导入控制器的定位器
+Hide All Locators -- 隐藏所有定位器
+Unhide All Locators -- 解除隐藏所有定位器
+Select All Locators -- 选择所有定位器
+Create Ctrl And Joints -- 创建控制器和骨骼并自动赋予绑定关系
+Create CS Bone -- 创建CS骨骼（是把脚本同级目录下的CSBone.max合并进来的作用，仅作测试参考）
+Clear Scene -- 清空场景
+
+操作步骤
+1. 导入骨骼和控制器的定位器
+2. 选择Create Ctrl And Joints，创建控制器和骨骼并自动赋予绑定关系
+（需注意头部骨骼要叫b_Head，这个后续迭代会改成开放的文本框支持修改）
